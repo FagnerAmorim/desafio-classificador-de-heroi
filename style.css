@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+.bloco {
+    background-color: beige;
+    display: flex;
+}
+
+.card {
+    width: 300px;
+    height: 350px;
+    border: 2px solid black;
+    text-align: center;
+}
+
+.img {
+    width: 300px;
+    height: 250px;
+}
