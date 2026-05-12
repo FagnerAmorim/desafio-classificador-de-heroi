@@ -7,19 +7,50 @@
 }
 
 h1 {
+    margin: 20px;
     text-align: center;
+    color: blue;
+}
+
+h2 {
+
+}
+
+p {
+    font-size: 20px;
+    margin: 10px;
 }
 
 .bloco {
+    padding: 20px;
+    height: 1000px;
     background-color: beige;
     display: flex;
 }
 
 .card {
+    background: linear-gradient(
+    135deg, 
+    #00f2fe 0%,    /* Ciano claro */
+    #4facfe 30%,   /* Azul */
+    #bc4e9c 60%,   /* Magenta/Roxo */
+    #f80759 100%   /* Rosa choque/Vermelho */
+    );
+    margin: 10px;
     width: 300px;
-    height: 350px;
-    border: 2px solid black;
+    height: 420px;
+    color: white;
+    position: relative;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5), 
+              inset 0 0 10px rgba(255, 255, 255, 0.3);
     text-align: center;
+}
+
+.card:hover {
+    box-shadow: 0 4px 15px rgba(236, 43, 43, 0.5), 
+              inset 0 0 10px rgba(17, 1, 1, 0.3);
 }
 
 .img {
