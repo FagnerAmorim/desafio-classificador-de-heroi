@@ -12,8 +12,13 @@ h1 {
     color: blue;
 }
 
-h2 {
+header > p {
+    text-align: center;
+    color: blue;
+}
 
+h2 {
+    padding: 10px;
 }
 
 p {
@@ -22,10 +27,12 @@ p {
 }
 
 .bloco {
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 20px;
     padding: 20px;
-    height: 1000px;
+    height: 1800px;
     background-color: beige;
-    display: flex;
+    display: grid;
 }
 
 .card {
@@ -36,16 +43,46 @@ p {
     #bc4e9c 60%,   /* Magenta/Roxo */
     #f80759 100%   /* Rosa choque/Vermelho */
     );
-    margin: 10px;
-    width: 300px;
-    height: 420px;
-    color: white;
-    position: relative;
     border: 2px solid rgba(255, 255, 255, 0.5);
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5), 
               inset 0 0 10px rgba(255, 255, 255, 0.3);
     text-align: center;
+    background-color: transparent;
+    perspective: 1000px; /* Cria o efeito de profundidade */
+    cursor: pointer;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+/* Classe que o JavaScript vai adicionar para girar */
+.card.flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Esconde o verso quando não virado */
+    backface-visibility: hidden;
+}
+
+.card-back {
+    background-color: #222;
+    color: white;
+    transform: rotateY(180deg); /* Já começa invertido */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 8px;
 }
 
 .card:hover {
@@ -54,6 +91,24 @@ p {
 }
 
 .img {
+    margin: 20px;
     width: 300px;
     height: 250px;
+}
+
+.ultimate {
+    grid-row: 4;
+    grid-column: 2;
+}
+
+footer {
+    padding: 10px;
+    height: 30px;
+    text-align: center;
+    background-color: blue;
+    color: white;
+}
+
+a {
+    color: antiquewhite;
 }
