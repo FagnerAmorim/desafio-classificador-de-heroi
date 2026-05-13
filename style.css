@@ -112,3 +112,51 @@ footer {
 a {
     color: antiquewhite;
 }
+
+/* Media Query para telas de até 768px (Celulares e Tablets pequenos) */
+@media screen and (max-width: 768px) {
+    
+    .bloco {
+        /* Muda de 3 colunas para apenas 1 */
+        grid-template-columns: 1fr; 
+        
+        /* Ajusta a altura para automática, pois 1800px fixos 
+           não comportariam 10 cards em uma única coluna */
+        height: auto; 
+        padding: 10px;
+        margin: 10px;
+        gap: 20px; /* Espaçamento entre os cards verticalmente */
+    }
+
+    .card {
+        /* Garante que o card ocupe a largura disponível menos as margens */
+        width: 100%;
+        max-width: 350px; /* Limita para não ficar largo demais em telas médias */
+        margin: 0 auto;   /* Centraliza o card na tela */
+        height: 380px;    /* Define uma altura fixa para o efeito de rotação funcionar */
+    }
+
+    .img {
+        /* Torna a imagem responsiva */
+        width: 80%; 
+        height: 60%;
+        max-width: 200px;
+        margin: 10px auto;
+    }
+
+    /* Remove o posicionamento específico do card "ultimate" 
+       para que ele siga o fluxo normal da lista no celular */
+    .ultimate {
+        grid-row: auto;
+        grid-column: auto;
+        width: 80%;
+    }
+
+    h1 {
+        font-size: .5em;
+    }
+
+    p {
+        font-size: 16px;
+    }
+}
