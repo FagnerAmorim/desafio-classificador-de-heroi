@@ -149,7 +149,7 @@ a {
     .ultimate {
         grid-row: auto;
         grid-column: auto;
-        width: 80%;
+        width: 100%;
     }
 
     h1 {
